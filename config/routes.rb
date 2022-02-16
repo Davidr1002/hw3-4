@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 resources :travel_journal
 resources :companies
 resources :contacts
+resources :places
+resources :posts
   # Defines the root path route ("/")
   # root "articles#index"
 end
