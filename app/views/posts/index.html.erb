@@ -1,23 +1,10 @@
-<h1>Post entry</h1>
+ 
+ <ul>
+   <% for post in @posts %>
+    <li>
+      <a href="/places/<%= place.id %>"><%= place.name %></a>
+    </li>
+   <% end %>
+</ul>
 
-<%= form_with model: @post do |form| %>
-  <p>
-    <%= form.label "title" %>
-    <%= form.text_field "title" %>
-  </p<>
-
-  <p>
-    <%= form.label "description" %>
-    <%= form.text_field "description" %>
-  </p>
-
-    <p>
-    <%= form.label "posted_on" %>
-    <%= form.text_field "posted_on" %>
-  </p>
-
-  <!-- So we can transfer state from the previous action to the next -->
-  <%= form.hidden_field "place_id" %>
-
-  <p><%= form.submit %></p>
-<% end %>
+<p><a href="/posts/new">Create a new place</a></p>
