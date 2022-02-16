@@ -1,15 +1,13 @@
 <h1>Input places I have beeen to</h1>
 
-<%= form_with model: @post do |form| %>
-  <p>
-    <%= form.label "name" %>
-    <%= form.text_field "name" %>
-  </p<>
 
-  <p>
-    <%= form.label "date" %>
-    <%= form.text_field "date" %>
-  </p>
 
-  <p><%= form.submit %></p>
-<% end %>
+ <ul>
+   <% for place in @places %>
+    <li>
+      <a href="/places/<%= place.id %>"><%= place.name %></a>
+    </li>
+   <% end %>
+</ul>
+
+<p><a href="/places/new">Create a new place</a></p>
